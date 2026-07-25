@@ -1,17 +1,146 @@
+/* ==========================================
+   Forge Master Calculator
+   Common CSS
+   모든 페이지에서 공통으로 사용하는 스타일
+========================================== */
+
+:root{
+
+    /* ===== Colors ===== */
+    --bg:#101214;
+    --surface:#1d2228;
+
+    --text:#ffffff;
+    --text-secondary:#9ca3af;
+
+    --primary:#d4af37;
+    --primary-dark:#b89025;
+
+    --white:#ffffff;
+    --black:#111111;
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --danger:#ef4444;
+
+    /* ===== Radius ===== */
+    --radius-sm:10px;
+    --radius-md:14px;
+    --radius-lg:18px;
+
+    /* ===== Shadow ===== */
+    --shadow-sm:0 4px 10px rgba(0,0,0,.20);
+    --shadow-md:0 10px 20px rgba(0,0,0,.35);
+    --shadow-lg:0 18px 35px rgba(0,0,0,.45);
+
+    /* ===== Animation ===== */
+    --transition-fast:.15s ease;
+    --transition:.25s ease;
+    --transition-slow:.4s ease;
+}
+
+
+/* ==========================================
+   Reset
+========================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+
+/* ==========================================
+   Base
+========================================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    background:#101214;
-    color:#fff;
-    font-family:Arial, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+
+    font-family:
+        "Pretendard",
+        "Noto Sans KR",
+        Arial,
+        sans-serif;
+
+    line-height:1.5;
 }
 
-.container{
-    width:440px;
-    max-width:90%;
+
+/* ==========================================
+   Typography
+========================================== */
+
+h1,h2,h3,h4,h5,h6{
+    font-weight:700;
 }
 
+p{
+    color:var(--text-secondary);
+}
+
+
+/* ==========================================
+   Form
+========================================== */
+
+button,
+input,
+select,
+textarea{
+    font:inherit;
+    border:none;
+    outline:none;
+}
+
+button{
+    cursor:pointer;
+    background:none;
+}
+
+
+/* ==========================================
+   Link
+========================================== */
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* ==========================================
+   Image
+========================================== */
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+
+/* ==========================================
+   List
+========================================== */
+
+ul,
+ol{
+    list-style:none;
+}
+
+
+/* ==========================================
+   Selection
+========================================== */
+
+::selection{
+    background:var(--primary);
+    color:var(--black);
+}
