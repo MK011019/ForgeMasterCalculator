@@ -43,6 +43,7 @@ body{
     align-items:center;
 
     width:100%;
+    min-height:100px;
     padding:28px 26px;
 
     background:var(--surface);
