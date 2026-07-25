@@ -1,20 +1,142 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forge Master Calculator</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/forge.css">
 </head>
+
 <body>
+
     <button class="back-btn" onclick="location.href='index.html'">
-    ← Home
-</button>
-    <div class="container">
+        ← Home
+    </button>
+
+    <main class="container">
+
         <div class="logo">⚒️</div>
-        <h1>Forge Master</h1>
-        <p class="subtitle">강화 비용 · 재료 계산</p>
-    </div>
+
+        <h1 class="title">Forge Master</h1>
+
+        <p class="subtitle">
+            Forge Ascension Calculator
+        </p>
+
+        <!-- 계산기 -->
+
+        <section class="calculator">
+
+            <div class="input-group">
+                <label for="current-level">현재 레벨</label>
+                <select id="current-level"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="target-level">목표 레벨</label>
+                <select id="target-level"></select>
+            </div>
+
+            <div class="input-group">
+                <label for="time-reduction">시간 감소 (%)</label>
+                <input
+                    type="number"
+                    id="time-reduction"
+                    min="0"
+                    max="50"
+                    value="0">
+            </div>
+
+            <div class="input-group">
+                <label for="cost-reduction">비용 감소 (%)</label>
+                <input
+                    type="number"
+                    id="cost-reduction"
+                    min="0"
+                    max="25"
+                    value="0">
+            </div>
+
+            <button
+                class="calc-btn"
+                id="calculate-btn">
+                계산하기
+            </button>
+
+        </section>
+
+        <!-- 계산 결과 -->
+
+        <section class="result">
+
+            <div class="result-card">
+                <h3>💰 필요 골드</h3>
+                <p id="gold-result">0</p>
+            </div>
+
+            <div class="result-card">
+                <h3>⏱ 총 업그레이드 시간</h3>
+                <p id="time-result">0일 0시간 0분</p>
+            </div>
+
+            <div class="result-card">
+                <h3>💎 즉시 완료 젬</h3>
+                <p id="gem-result">0</p>
+            </div>
+
+        </section>
+
+        <!-- 레벨 데이터 -->
+
+        <section class="level-data">
+
+            <h2>레벨별 데이터</h2>
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Lv</th>
+                            <th>골드</th>
+                            <th>시간</th>
+                            <th>젬</th>
+
+                            <th>Primitive</th>
+                            <th>Medieval</th>
+                            <th>Early</th>
+                            <th>Modern</th>
+                            <th>Space</th>
+                            <th>Interstellar</th>
+                            <th>Multiverse</th>
+                            <th>Quantum</th>
+                            <th>Underworld</th>
+                            <th>Divine</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="level-table">
+
+                        <!-- forge.js에서 자동 생성 -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/forge.js"></script>
+
 </body>
+
 </html>

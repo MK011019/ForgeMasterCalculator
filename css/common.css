@@ -9,12 +9,16 @@
     /* ===== Colors ===== */
     --bg:#101214;
     --surface:#1d2228;
+    --surface-hover:#2a3038;
+
+    --border:#343b45;
 
     --text:#ffffff;
     --text-secondary:#9ca3af;
 
     --primary:#d4af37;
-    --primary-dark:#b89025;
+    --primary-hover:#c89f2d;
+    --primary-active:#b89025;
 
     --white:#ffffff;
     --black:#111111;
@@ -117,7 +121,8 @@ button{
     transition:
         background var(--transition),
         color var(--transition),
-        transform var(--transition);
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 
