@@ -6,6 +6,56 @@
 
 body{
     background:#111315;
+    color:#fff;
+    font-family:Arial,sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+}
+
+.container{
+    width:380px;
+    max-width:90%;
+    text-align:center;
+}
+
+h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#999;
+    margin-bottom:40px;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.card{
+    background:#1b1f24;
     color:white;
-    font-family:Arial, sans-serif;
+
+    border:none;
+    border-radius:18px;
+
+    padding:22px;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    background:#d4af37;
+    color:#111;
 }
