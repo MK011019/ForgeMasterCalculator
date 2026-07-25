@@ -12,19 +12,23 @@
 
 <body>
 
-    <button class="back-btn" onclick="location.href='index.html'">
-        ← Home
-    </button>
-
     <main class="container">
 
-        <div class="logo">⚒️</div>
+        <button class="back-btn" onclick="location.href='index.html'">
+            ← Home
+        </button>
 
-        <h1 class="title">Forge Master</h1>
+        <header class="page-header">
 
-        <p class="subtitle">
-            Forge Ascension Calculator
-        </p>
+            <div class="logo">⚒️</div>
+
+            <h1 class="title">Forge Master</h1>
+
+            <p class="subtitle">
+                Forge Ascension Calculator
+            </p>
+
+        </header>
 
         <!-- 계산기 -->
 
@@ -43,8 +47,8 @@
             <div class="input-group">
                 <label for="time-reduction">시간 감소 (%)</label>
                 <input
-                    type="number"
                     id="time-reduction"
+                    type="number"
                     min="0"
                     max="50"
                     value="0">
@@ -53,8 +57,8 @@
             <div class="input-group">
                 <label for="cost-reduction">비용 감소 (%)</label>
                 <input
-                    type="number"
                     id="cost-reduction"
+                    type="number"
                     min="0"
                     max="25"
                     value="0">
@@ -68,23 +72,44 @@
 
         </section>
 
-        <!-- 계산 결과 -->
+        <!-- 결과 -->
 
-        <section class="result">
+        <section class="result-section">
 
-            <div class="result-card">
-                <h3>💰 필요 골드</h3>
-                <p id="gold-result">0</p>
-            </div>
+            <h2 class="section-title">계산 결과</h2>
 
-            <div class="result-card">
-                <h3>⏱ 총 업그레이드 시간</h3>
-                <p id="time-result">0일 0시간 0분</p>
-            </div>
+            <div class="result">
 
-            <div class="result-card">
-                <h3>💎 즉시 완료 젬</h3>
-                <p id="gem-result">0</p>
+                <div class="result-card">
+
+                    <span class="icon">💰</span>
+
+                    <p id="gold-result">0</p>
+
+                    <span class="label">필요 골드</span>
+
+                </div>
+
+                <div class="result-card">
+
+                    <span class="icon">⏱</span>
+
+                    <p id="time-result">0일</p>
+
+                    <span class="label">총 시간</span>
+
+                </div>
+
+                <div class="result-card">
+
+                    <span class="icon">💎</span>
+
+                    <p id="gem-result">0</p>
+
+                    <span class="label">즉시 완료 젬</span>
+
+                </div>
+
             </div>
 
         </section>
@@ -93,45 +118,47 @@
 
         <section class="level-data">
 
-            <h2>레벨별 데이터</h2>
+    <details>
 
-            <div class="table-wrapper">
+        <summary class="section-title">
+            📊 레벨별 데이터 보기
+        </summary>
 
-                <table>
+        <div class="table-wrapper">
 
-                    <thead>
+            <table>
 
-                        <tr>
-                            <th>Lv</th>
-                            <th>골드</th>
-                            <th>시간</th>
-                            <th>젬</th>
+                <thead>
 
-                            <th>Primitive</th>
-                            <th>Medieval</th>
-                            <th>Early</th>
-                            <th>Modern</th>
-                            <th>Space</th>
-                            <th>Interstellar</th>
-                            <th>Multiverse</th>
-                            <th>Quantum</th>
-                            <th>Underworld</th>
-                            <th>Divine</th>
-                        </tr>
+                    <tr>
+                        <th>Lv</th>
+                        <th>골드</th>
+                        <th>시간</th>
+                        <th>젬</th>
 
-                    </thead>
+                        <th>Primitive</th>
+                        <th>Medieval</th>
+                        <th>Early</th>
+                        <th>Modern</th>
+                        <th>Space</th>
+                        <th>Interstellar</th>
+                        <th>Multiverse</th>
+                        <th>Quantum</th>
+                        <th>Underworld</th>
+                        <th>Divine</th>
+                    </tr>
 
-                    <tbody id="level-table">
+                </thead>
 
-                        <!-- forge.js에서 자동 생성 -->
+                <tbody id="level-table"></tbody>
 
-                    </tbody>
+            </table>
 
-                </table>
+        </div>
 
-            </div>
+    </details>
 
-        </section>
+</section>
 
     </main>
 
