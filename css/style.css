@@ -90,7 +90,9 @@ h1{
     text-align:left;
     transition:.3s;
 }
-
+.card-desc:empty{
+    display:none;
+}
 .arrow{
     font-size:26px;
     font-weight:bold;
